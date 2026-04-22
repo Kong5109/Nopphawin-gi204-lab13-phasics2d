@@ -226,7 +226,7 @@ SurfaceEffector2D:
     m_Bits: 4294967295
   m_Speed: 9
   m_SpeedVariation: 0
-  m_ForceScale: 0.1
+  m_ForceScale: 1
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
@@ -1910,7 +1910,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &692144135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2220,6 +2220,7 @@ GameObject:
   - component: {fileID: 1366098961}
   - component: {fileID: 1366098960}
   - component: {fileID: 1366098962}
+  - component: {fileID: 1366098963}
   m_Layer: 0
   m_Name: Water_0
   m_TagString: Untagged
@@ -2331,8 +2332,8 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_IsTrigger: 1
+  m_UsedByEffector: 1
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
@@ -2347,6 +2348,26 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4.6, y: 2.06}
   m_EdgeRadius: 0
+--- !u!253 &1366098963
+BuoyancyEffector2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366098959}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_SurfaceLevel: 0.53
+  m_Density: 2
+  m_LinearDamping: 5
+  m_AngularDamping: 5
+  m_FlowAngle: 45
+  m_FlowMagnitude: 5
+  m_FlowVariation: 2
 --- !u!1 &1603123896
 GameObject:
   m_ObjectHideFlags: 0
