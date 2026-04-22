@@ -28,7 +28,6 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Jump");
         }
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
